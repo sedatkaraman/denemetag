@@ -60,10 +60,18 @@ async def tag(client: Client, message: Message):
             else:
                 reason = ""
                 tip = "0"
+                c = await message.reply_text(
+                LAN.ZATEN_CALISIYORUM.format(message.from_user.mention)
+        )
+                await clean_mode(c, message)
         else:
             if len(message.command) <= 1:
                 reason = ""
                 tip = "0"
+                c = await message.reply_text(
+                LAN.ZATEN_CALISIYORUM.format(message.from_user.mention)
+        )
+                await clean_mode(c, message)
             else:
                 reason = message.text.split(None, 1)[1]
                 tip = "1"
