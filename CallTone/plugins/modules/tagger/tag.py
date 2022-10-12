@@ -132,6 +132,7 @@ async def tcommands(bot: Client, query: CallbackQuery):
         await sleep(DURATION)
         await query.message.delete()
         return
+    
 
     if chat in calisan:
         await query.message.edit(
@@ -177,11 +178,7 @@ async def tcommands(bot: Client, query: CallbackQuery):
                     else:
                         text = f"📢 **{reason}**\n\n{usrtxt}"
                     await bot.send_message(chat, text=text)
-                    c = await message.reply_text(
-            LAN.ZATEN_CALISIYORUM.format(message.from_user.mention)
-        )
-                    await clean_mode(c, message)
-                    return
+                    
                     usrnum = 0
                     usrtxt = ""
 
