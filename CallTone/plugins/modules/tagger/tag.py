@@ -177,7 +177,6 @@ async def tcommands(bot: Client, query: CallbackQuery):
                     else:
                         text = f"📢 **{reason}**\n\n{usrtxt}"
                     await bot.send_message(chat, text=text)
-                    await sleep(DURATION)
                     usrnum = 0
                     usrtxt = ""
 
