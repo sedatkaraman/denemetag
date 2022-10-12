@@ -71,7 +71,8 @@ async def tag(client: Client, message: Message):
                 tip = "1"
         COUNT = await get_count(chat_id)
         reasons[chat_id] = reason
-        m = await client.send_message(
+        c = await client.send_message(bir kelime yazınız )
+        else:
             chat_id,
             LAN.ASK_NORMAL_TAG,
             reply_markup=InlineKeyboardMarkup(
